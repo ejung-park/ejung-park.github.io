@@ -79,11 +79,10 @@
 
 ### 사내 업무 데이터 연동·관리 시스템
 
-**주요 기술:** Python, 웹 크롤링, PHP, Laravel, MySQL, 사내 DB, ShotGrid API, Ollama, Excel·CSV
+**주요 기술:** Python, 웹 크롤링, PHP, Laravel, MariaDB, ShotGrid API, Deadline, Excel
 
-- Python으로 다우오피스 결재 문서를 수집해 사내 DB에 저장하고 ShotGrid와 연동한 사규별 휴가·대체휴가 관리 구현
-- Laravel 기반 Deadline 데이터 입력에서 분할 읽기·작업 ID 중복 확인·시간 값 정규화 적용
-- 기간·플러그인 필터와 SQL 집계로 작업 수·대기·렌더 시간의 시간대·일·월 추이 조회 및 Excel 출력 구현
+- **사규 기반 휴가·대체휴가 관리:** 다우오피스 결재 문서를 수집해 MariaDB·ShotGrid와 연동하고, 사규에 따른 휴가·대체휴가 발생·사용 내역 관리
+- **렌더팜 작업 현황·효율 분석 웹:** 기간·플러그인별 작업량·대기 시간·렌더 시간을 집계하고 추이를 시각화해, 렌더팜의 처리 현황과 운영 효율을 확인할 수 있도록 구현
 
 ### Claude Code 실무 적용·검증
 
