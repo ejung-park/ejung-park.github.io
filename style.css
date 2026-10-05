@@ -8,3 +8,5 @@ mark{background:#e8eef5;color:#243a52;padding:1px 4px;border-radius:2px;font-wei
 #experience + .company{border-top:0;padding-top:8px}
 
 .identity{display:flex;align-items:center;gap:30px}.profile-photo{width:96px;height:96px;border-radius:50%;object-fit:cover;flex-shrink:0}.education{border-top:1px solid #e2e7ed;padding:28px 0}.education h2{margin:0 0 14px}.education li{white-space:nowrap}@media(max-width:760px){.identity{justify-content:space-between;gap:16px}.profile-photo{width:76px;height:76px}.education li{font-size:12px}}
+
+.intro-heading{font-size:16px;font-weight:650;display:inline-block;margin-bottom:4px}@media(max-width:760px){.intro-heading{font-size:15px}}
