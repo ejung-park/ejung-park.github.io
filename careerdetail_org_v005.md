@@ -202,7 +202,7 @@ VFX·CG 제작사에서는 부서 간 산출물 전달 규약과 Python 공통 �
 
 ### 웹 기반 제작 작업·작업자 스케줄링 시스템
 
-**구현 분야:** 프로젝트·컷별 작업 배정, 작업 정보 공유, 전사 인력 일정 관리
+**주요 기술:** Python, PHP, MySQL, JavaScript, jQuery, HTML, ShotGrid API
 
 - 프로젝트·컷별 팀·작업자 배정과 작업 정보 공유 기능을 웹 기반 시스템으로 구현
 - 전사 작업자 일정을 한눈에 조회하고 예정 작업이 없는 인력을 확인해 후속 작업 배정 지원
@@ -217,7 +217,7 @@ VFX·CG 제작사에서는 부서 간 산출물 전달 규약과 Python 공통 �
 
 ### 그룹웨어·모바일 업무 화면
 
-**주요 기술:** PHP, MySQL, jQuery Mobile, Linux, Apache, Tomcat
+**주요 기술:** PHP, MySQL, jQuery Mobile, Linux, Apache
 
 - 약 100명 규모 PHP·MySQL 그룹웨어 업무 기능과 jQuery Mobile 화면 개발
 - 사내 Linux 서버 환경 운영
