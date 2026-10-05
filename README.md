@@ -1,325 +1,268 @@
-# Beautiful Jekyll
+# 박이정 | 이력서 · 경력기술서
 
-[![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.me/daattali/20)
-[![Gem Version](https://badge.fury.io/rb/beautiful-jekyll-theme.svg)](https://badge.fury.io/rb/beautiful-jekyll-theme)
+[경력 사이트 보기](https://ejung-park.github.io/)
 
-> *Copyright 2019 [Dean Attali](https://deanattali.com)*
 
-**Beautiful Jekyll** is a ready-to-use template to help you create an awesome website quickly. Perfect for personal sites, blogs, or simple project websites.  [Check out a demo](https://deanattali.com/beautiful-jekyll) of what you'll get after just two minutes.  You can also look at [my personal website](https://deanattali.com) to see it in use, or see examples of websites other people created using this theme [here](#showcased-users-success-stories).
+업무를 이해하고, 여러 부서가 함께 사용할 수 있는 시스템으로 구현하는 개발자입니다.
 
-**If you enjoy this theme, please consider [supporting me](https://www.paypal.me/daattali/20) for developing and maintaining this template.**
+고객·기획팀·현업 부서와 업무 절차와 예외 조건을 확인하고, 모호한 요구사항을 데이터 구조·상태 관리·시스템 연동 기준으로 구체화합니다. 웹·앱 서비스와 사내 업무 시스템을 직접 설계·개발하며, 필요한 기술을 익혀 실제 업무에 적용해 왔습니다.
 
-<p align="center">
-  <a href="https://www.paypal.me/daattali">
-    <img src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" />
-  </a>
-</p>
+VFX·CG 제작사에서는 부서 간 산출물 전달 규약과 Python 공통 실행 환경을 정립하고, 제작 도구·반복 업무 자동화·작업시간 기록·경영지원 시스템을 개발·운영했습니다. 웹·앱 개발팀에서는 약 10명 규모 팀의 일정과 진행을 관리하고, 기획 검토와 고객 요구 조율을 병행하며 주요 기능을 직접 개발했습니다.
 
-### Table of contents
+지연된 프로젝트를 인수해 데이터 구조와 기능을 개선하고 개발을 마무리한 경험이 있습니다. 사내 시스템은 직접 테스트와 현업 사용자 검증을 거쳐 배포·운영했으며, 고객 프로젝트는 개발 범위·일정을 협의하고 배포·인계까지 담당했습니다.
 
-- [Prerequisites](#prerequisites)
-- [Build your website in 3 steps](#build-your-website-in-3-steps)
-- [Add your own content](#add-your-own-content)
-- [Last important thing: YAML front matter ("parameters" for a page)](#last-important-thing-yaml-front-matter-parameters-for-a-page)
-- [Features](#features)
-- [Creating a User Page vs a Project Page](#creating-a-user-page-vs-a-project-page)
-- [Showcased users (success stories!)](#showcased-users-success-stories)
-- [Advanced: local development](#advanced-local-development-using-docker)
-- [FAQ and support](#faq-and-support)
-- [Credits and contributions](#credits)
-
-## Prerequisites
-
-- You need to have a GitHub account. If you don't have one, [sign up here](https://github.com/join) - it takes one minute. This is where your website will live - if you sign up with username `johnsmith` then your website will be `https://johnsmith.github.io`.
-- It would be helpful to understand what Markdown is and how to write it. Markdown is just a way to take a piece of text and format it to look a little nicer.  For example, this whole instruction set that you're reading is written in markdown - it's just text with some words being bold/larger/italicized/etc. I recommend taking 5 minutes to learn markdown [with this amazingly easy yet useful tutorial](https://markdowntutorial.com/).
-
-## Build your website in 3 steps
-
-Getting started is *literally* as easy as 1-2-3 :smile:
-Scroll down to see the steps involved, but here is a 40-second video just as a reference as you work through the steps.
-
-![Installation steps](img/install-steps.gif)
-
-### 1. Fork this repository
-
-(Assuming you are on this page and logged into GitHub) Fork this repository by clicking the *Fork* button on the top right corner. Forking means that you now copied this whole project and all the files into your account.
-
-### 2. Rename the repository to `<yourusername>.github.io`
-
-This will create a GitHub User page ready with the **Beautiful Jekyll** template that will be available at `https://<yourusername>.github.io` within a couple minutes.  To do this, click on *Settings* at the top (the cog icon) and there you'll have an option to rename.
-
-### 3. Customize your website settings
-
-Edit the `_config.yml` file to change all the settings to reflect your site. To edit the file, click on it and then click on the pencil icon (watch the video tutorial above if you're confused).  The settings in the file are fairly self-explanatory and I added comments inside the file to help you further. Any line that begins with a pound sign (`#`) is a comment, and the rest of the lines are actual settings.
-
-Another way to edit the config file (or any other file) is to use [prose.io](https://prose.io/), which is just a simple interface to allow you to more intuitively edit files or add new files to your project.
-
-After you save your changes to the config file (by clicking on *Commit changes* as the video tutorial shows), your website should be ready in a minute or two at `https://<yourusername>.github.io`. Every time you make a change to any file, your website will get rebuilt and should be updated in about a minute or so.
-
-You can now visit your shiny new website, which will be seeded with several sample blog posts and a couple other pages. Your website is at `https://<yourusername>.github.io` (replace `<yourusername>` with your user name). Do not add `www` to the URL - it will not work!
-
-**Note:** The video above goes through the setup for a user with username `daattalitest`. I only edited one setting in the `_config.yml` file in the video, but **you should actually go through the rest of the settings as well. Don't be lazy, go through all the settings :)**
-
-## Add your own content
-
-To add pages to your site, you can either write a markdown file (`.md`) or you can write an HTML file directly.  It is much easier to write markdown than HTML, so I suggest you do that (use the [tutorial I mentioned above](https://markdowntutorial.com/) if you need to learn markdown). You can look at some files on this site to get an idea of how to write markdown. To look at existing files, click on any file that ends in `.md`, for example [`aboutme.md`](./aboutme.md). On the next page you can see some nicely formatted text (there is a word in bold, a link, bullet points), and if you click on the pencil icon to edit the file, you will see the markdown that generated the pretty text. Very easy!
-
-In contrast, look at [`index.html`](./index.html). That's how your write HTML - not as pretty. So stick with markdown if you don't know HTML.
-
-Any file that you add inside the [`_posts`](./_posts) directory will be treated as a blog entry.  You can look at the existing files there to get an idea of how to write blog posts.  After you successfully add your own post, you can delete the existing files inside [`_posts`](./_posts) to remove the sample posts, as those are just demo posts to help you learn.
-
-As mentioned previously, you can use [prose.io](https://prose.io/) to add or edit files instead of doing it directly on GitHub, it can be a little easier that way.
-
-## Last important thing: YAML front matter ("parameters" for a page)
-
-In order to have your new pages use this template and not just be plain pages, you need to add [YAML front matter](https://jekyllrb.com/docs/front-matter/) to the top of each page. This is where you'll give each page some parameters that I made available, such as a title and subtitle. I'll go into more detail about what parameters are available later. If you don't want to use any parameters on your new page (this also means having no title), then use the empty YAML front matter:
-
-```
 ---
+
+## 스톤브이스튜디오
+
+**사내 시스템·공통 개발 환경 및 제작 파이프라인 개발·운영**  
+2023.02–2026.08 | TD팀 실장
+
+### Python 실행 환경·공통 모듈 중앙 관리
+
+**담당:** 호환성 테스트·버전 선정·공통 모듈·배포 관리  
+**주요 기술:** Python, 환경변수·PYTHONPATH, Windows·Linux, Rez, ShotGrid API
+
+- Maya·Houdini·Nuke·Arnold 연동 환경의 Python·모듈 호환성을 검증하고 실행 환경·적용 버전 선정
+- 환경변수·PYTHONPATH·Rez·Maya 모듈 경로로 프로그램별 실행 환경과 공통 패키지 로딩 구성
+- ShotGrid 접속·경로 변환·로깅·파일 복사·시퀀스 처리를 공통 모듈로 제공하고 버전·배포·업데이트 중앙 관리
+
+### 부서 간 제작 규약·Maya·Nuke 입출력 파이프라인
+
+**담당:** 부서 간 규약 협의·설계·개발·운영, Houdini 데이터 연동 지원  
+**주요 기술:** Python, Maya Python API, Nuke Python API, PySide·PyQt, ShotGrid API·Toolkit, Alembic
+
+- 부서별 입력·출력 요구를 공용 경로·파일 유형·버전 규약으로 정리하고 제작 도구에 적용
+- 전 직원용 Maya 퍼블리시를 처음부터 개발하고 산출물 검사·내보내기·ShotGrid 등록·후속 부서 로딩 연결
+- 프로젝트·샷 기반 Maya 작업 환경 자동 설정과 기존 씬 설정 보존, 파일·노드 충돌 검사·텍스처 경로 처리 구현
+- Nuke 공통·프로젝트별 설정 훅으로 컬러·LUT·CDL·프레임·출력 규격 적용, 리타임 출력·Deadline 실행·ShotGrid 등록 연결
+- 부서 간 캐시·셰이더·할당 정보 전달을 규약에 맞춰 구현하고 Houdini 부서의 데이터 연동 지원
+
+### PM 업무 지원·제작 자료 처리 자동화
+
+**담당:** PM 업무 분석·자동화 범위 정의·도구 설계·개발  
+**주요 기술:** Python, PySide2, Qt QThreadPool·시그널, Nuke Python API, OCIO·LUT, Deadline, ShotGrid API·Event Daemon, Excel, FFmpeg
+
+- 원본 메타데이터로 Excel 컷 목록을 생성하고 PM이 입력한 샷 이름을 제작 데이터와 연결
+- 컷·프로젝트 설정으로 Nuke 작업을 생성해 Deadline에서 실행하고 색상 변환·MOV·JPG 출력·원본 배치·ShotGrid 등록 자동화
+- 시퀀스·마스크 검사와 자료 전달·외주 결과물 수령을 연결하고 전달 이력·Version·리뷰 영상 등록 구현
+- MOV 수집·FFmpeg 변환과 Nuke 참조 자료 아카이브 구현, QThreadPool·시그널로 파일 처리와 GUI 갱신 분리
+- 약 200~300개 컷에서 반나절 이상 소요되던 PM 수작업을 Excel 입력·결과 확인 중심으로 전환
+
+### 타임로그 · 컷·작업별 투입 시간 자동 기록
+
+**담당:** 시스템 대부분 직접 개발, 작업 식별·로컬 DB·서버 동기화 구성  
+**주요 기술:** Python, pywin32(win32gui·win32process), psutil, ctypes, PySide2, sqlite3, MySQL, ShotGrid API, threading
+
+- 전 직원용 시스템의 대부분을 개발하고 pywin32·psutil·ctypes로 활성 프로그램·작업 문맥·입력 활동 식별
+- SQLite에 작업 기록·Task 캐시·파일 매핑을 저장하고 조회 인덱스·복합 UNIQUE 제약 적용
+- 베트남 사무소의 외부 API 지연에 대응해 ShotGrid 이벤트 기반 MySQL 동기화와 로컬 캐시 조회 구성
+- 기록 수집과 백그라운드 전송을 분리하고 실패 기록의 미전송 상태 유지·재처리 구현
+- 입력 무활동·작업 프로그램 이탈 조건으로 기록을 제어하고 컷·작업별 실제 투입 시간 집계 지원
+
+### 지사·조직별 연간 인사평가 시스템
+
+**담당:** 인사평가 업무 구조 분석·시스템 개발, 질문·평가 관계·결과 관리 기능 구현  
+**주요 기술:** PHP, MySQL, JavaScript, JSON, Excel 출력, Ollama·로컬 H200 서버
+
+- 연도·지사·본부·파트별 평가 유형·질문·평가자–대상자 관계·응답을 분리하고 담당자의 직접 관리·전년도 설정 복사 구현
+- 평가 관계의 당시 조직·직책 정보와 진행 상태를 관리하고 중복 관계 확인·완료 평가 삭제 제한 적용
+- SQL JOIN·GROUP BY 집계와 공통 계산 함수로 항목별 점수·가중치·평균 산출 및 결과·Excel 출력 구현
+- ShotGrid 배정 시간과 타임로그 실투입 시간을 비교해 초과 시간·리테이크·승인 지표와 부서 평균 비교 제공
+- 로컬 H200·Ollama로 베트남어·영어 의견을 한국어로 번역·통합 요약하고 원문·자기평가·평가자 의견 구분
+
+### 사내 업무 데이터 연동·관리 시스템
+
+**주요 기술:** Python, 웹 크롤링, PHP, Laravel, MySQL, 사내 DB, ShotGrid API, Ollama, Excel·CSV
+
+- Python으로 다우오피스 결재 문서를 수집해 사내 DB에 저장하고 ShotGrid와 연동한 사규별 휴가·대체휴가 관리 구현
+- Laravel 기반 Deadline 데이터 입력에서 분할 읽기·작업 ID 중복 확인·시간 값 정규화 적용
+- 기간·플러그인 필터와 SQL 집계로 작업 수·대기·렌더 시간의 시간대·일·월 추이 조회 및 Excel 출력 구현
+
+### Claude Code 실무 적용·검증
+
+**주요 기술:** Claude Code, Markdown, 기존 Python 공통 모듈
+
+- 2025년부터 코드 작성·테스트 보조·매뉴얼·튜토리얼 작성에 Claude Code 활용
+- 참고 코드·공통 함수·연동 기준을 Markdown으로 제공해 기존 구현 재사용 유도
+- 직접 기능 테스트·부서 사용자 테스트·배포 후 산출물 확인으로 생성 결과 검증
+
 ---
-```
 
-If you want to use any parameters, write them between the two lines. For example, you can have this at the top of a page:
+## 디몬스터
 
-```
+**웹·앱 풀스택 개발 및 개발팀 리딩·기획 검토·고객 요구 조율**  
+2020.05–2023.01 | 개발3팀 팀장
+
+약 10명 팀의 일정·진행을 관리하며 15개 이상 서비스 개발에 참여했습니다. 주요 프로젝트의 개발·배포·인계를 담당했고, 서비스 운영은 고객사가 수행했습니다.
+
+### 개발팀 리딩·기획 검토·고객 요구 조율
+
+**담당:** 약 10명 팀의 일정·진행 관리, 기획 검토·고객 협의·직접 개발  
+**업무 범위:** 요구사항 구체화, 데이터·상태 설계, 웹·앱 개발
+
+- 약 10명 개발팀의 일정·진행을 관리하며 15개 이상 서비스 개발 참여
+- 기획서의 모호한 요구·예상 이슈를 검토하고 고객과 추가 개발 범위·일정·구현 대안 협의
+- 지연 프로젝트에 직접 투입해 개발·팀원 지원을 수행하고 주요 프로젝트의 배포·인계 담당
+
+### 블랭크 · 필라테스 예약·수업 관리 서비스 정상화
+
+**담당:** 프로젝트 인수·구조 개선·고객 협의·개발 완료  
+**주요 기술:** PHP, MySQL, React Native WebView, EXPLAIN, 슬로우 쿼리
+
+- 담당자 퇴사 후 프로젝트를 인수하고 수정 범위·영향을 정리해 추가 6개월 일정 협의
+- 수업·예약 데이터와 상태를 분리하고 회원 예약 UI·UX·직원·관리자 수업 관리 기능 개편
+- 잔여 수강 횟수·시간·정원·중복 예약 검사와 취소·대기 알림 구현
+- EXPLAIN·슬로우 쿼리 분석과 쿼리·인덱스 개선으로 회원 화면 로딩을 10초 이상에서 약 1.5초로 단축
+- 회원·직원·관리자 앱 개발을 완료하고 고객 신뢰 회복·후속 수주로 연결
+
+### 한진이지오더 · 쇼핑몰·판매자 관리·한진 시스템 연동
+
+**담당:** 회원 앱·판매자 앱·관리자 웹 개발, 외부 연동·코드 인계  
+**주요 기술:** PHP, MySQL, cURL, JSON, React Native WebView, FCM
+
+- PHP 기반 회원 쇼핑몰·판매자 관리·관리자 웹과 React Native WebView 앱 개발
+- 한진 회원 정보·택배 요금·지역 규약을 JSON API로 연동하고 판매자별·상품별 통계 구현
+- 회원 승인·주문·교환·반품 상태 처리와 앱 푸시·외부 앱 호출·화면 탐색 연결
+- 회원·판매자 앱과 관리자 웹의 개발·배포 및 코드 인수인계 수행
+
+### 이이에스 · 선박 운항·연료·배출량 계산
+
+**담당:** 업무 수식 분석·공통 계산 함수·웹 및 보고서 개발  
+**주요 기술:** PHP, MySQL, 외부 API, 데이터 보간, Excel 출력
+
+- 선박 운항 거리·연료 소비량 집계와 연료별 변환계수 기반 배출량 계산 구현
+- 선박 종류·용량·보정계수를 반영한 AER·CII 기준선·연도별 요구값·등급 산출
+- DFOC·RPM·속도 입력과 성능 데이터 보간으로 예상 연료·운항 지표 계산
+- 업무 수식을 공통 함수로 구성해 웹 조회·Excel 보고서에 연결하고 프로젝트 완료
+
+### 소문난명의 · 도수 예약 앱·병원 스케줄 관리 웹
+
+**주요 기술:** React Native, JavaScript, Redux, PHP, MySQL
+
+- React Native 사용자 예약 앱과 병원 스케줄 관리 웹·PHP API 개발
+- 병원 검색·상세 정보·리뷰 조회와 병원·치료사·날짜·시간 선택 기반 예약 기능 구현
+- 예약 요청·취소·내역 조회와 병원 측 예약 관리 기능을 연결하고 예약 알림 처리 구현
+- API로 받은 리뷰·예약 데이터를 Redux 상태에 반영해 여러 화면에서 공유·활용
+
+### 도수는약손 · 도수 예약 앱
+
+**주요 기술:** React Native, JavaScript, PHP, MySQL
+
+- 도수 예약 앱 개발·배포 완료 후 고객 인계. 이후 다년간 서비스에 사용
+- React Native 환자용 예약 앱과 PHP 기반 병원 예약·치료사 스케줄 관리 웹 개발
+- 병원·치료사·날짜·시간별 도수치료 예약과 예약 내역·상세 조회 기능 구현
+- 예약이 마감된 시간의 대기 신청과 예약 취소 발생 시 알림을 제공하는 흐름 구현
+- 병원 관리 화면에서 치료사·치료실·환자·예약 시간과 예약 상태를 연결해 관리
+
+### 텐더스비 · 웹·모바일 기능 연동
+
+**주요 기술:** React Native, JavaScript, WebView, FCM
+
+- 식음료 쇼핑 서비스의 웹 화면을 React Native WebView 앱으로 제공하고 웹·네이티브 기능 연결
+- JSON 메시지 기반 브리지로 네이버·카카오 로그인·로그아웃과 위치 조회 연결
+- FCM 알림 권한 요청·기기 토큰 획득·웹 전달 및 앱 실행 상태별 알림 수신 처리 구현
+- WebView 내 화면 이동·뒤로 가기와 외부 URL·앱 호출을 구분해 처리
+
+### 지연 프로젝트 개발·배포 지원 및 고객 요구 조율
+
+**담당:** 직접 개발·팀원 지원·추가 요구 범위 협의·배포 추진
+
+- 방드림·페달체크·식자재·지카랩·쥬피터 등 일정 지연과 반복 요청으로 부담이 누적된 프로젝트에 직접 투입해 기능 개발·수정을 수행하고, 담당 팀원을 지원하며 배포까지 진행
+- 고객 의견을 정리해 기존 기능의 수정과 신규 요구를 구분하고, 추가 개발이 일정과 구현 범위에 미치는 영향을 설명해 우선순위·반영 범위 협의
+- 기존 UI·업무 코드로 요구를 충족하는 방안을 우선 제안하고, 재사용이 어려운 경우 기존 기능의 수정 범위와 신규 개발량을 최소화하는 구현 대안 마련
+- 고객의 필수 요구와 조정 가능한 사항을 구분해 합의하고, 팀의 개발 부담과 고객의 누적된 불만을 함께 조율하며 프로젝트 마무리 지원
+
+### 서비스 배포·서버 이전·고객 인계
+
+**주요 기술:** AWS, NCloud, Ubuntu, Nginx
+
+- AWS·NCloud의 Ubuntu·Nginx 실행 환경 구성과 서비스 배포·서버 이전 수행
+- 고객 운영을 위한 코드·서비스 인수인계 대응
+
 ---
-title: Contact me
-subtitle: Here you'll find all the ways to get in touch with me
+
+## 포스크리에이티브파티
+
+**그룹웨어 기획·전체 개발·운영 및 제작·인력 관리 시스템 개발**  
+2014.02–2019.03 | TD팀 개발자
+
+### 그룹웨어 기획·개발·운영
+
+**담당:** 업무 분석·기획·전체 개발·운영  
+**주요 기술:** PHP, MySQL, JavaScript, jQuery, 모바일 웹, DB 트리거, Apache
+
+- 약 200명 규모 조직의 결재 문서·조직도·사규를 분석하고 그룹웨어 기획·전체 개발·운영
+- 사내 결재 양식과 승인 절차를 전자결재 기능으로 구현
+- 모바일 경비 입력·보관과 제출 시 누적 내역 자동 취합으로 월말 일괄 작성의 불편 해소
+- 세콤 출입 데이터를 수신하는 MySQL 서버 구성과 DB 트리거 기반 그룹웨어 연동 구현
+- 출입·근태 데이터를 휴가·연장근무·작업 일정에 연결하고 지각 패널티·휴일근무 대체휴가 등 사규 적용에 활용
+
+### 제작관리 플랫폼 도입·데이터 이전
+
+**주요 기술:** Python, PHP, MySQL, ShotGrid API
+
+- ShotGrid 도입 구성과 기존 제작 데이터 마이그레이션 수행
+- 이벤트 연동·반복 입력·계산 자동화와 Python 영상 변환 기능 개발
+
+### 웹 기반 제작 작업·작업자 스케줄링 시스템
+
+**주요 기술:** Python, PHP, MySQL, JavaScript, jQuery, HTML, ShotGrid API
+
+- 프로젝트·컷별 팀·작업자 배정과 작업 정보 공유 기능을 웹 기반 시스템으로 구현
+- 전사 작업자 일정을 한눈에 조회하고 예정 작업이 없는 인력을 확인해 후속 작업 배정 지원
+- 제작 작업과 인력 일정을 통합 관리하는 시스템으로 개발하고 특허 출원 신청 진행
+
 ---
-```
 
-You can look at the top of [`aboutme.md`](./aboutme.md) or [`index.html`](./index.html) as more examples.
+## 에이지웍스
 
-**Important takeaway: ALWAYS add the YAML front matter, which is two lines with three dashes, to EVERY page. If you have any parameters, they go between the two lines.**    
-If you don't include YAML then your file will not use the template.
+**그룹웨어·프로젝트 관리 시스템 개발**  
+2012.05–2014.02 | TD 개발자
 
-## Features
+### 그룹웨어·모바일 업무 화면
 
-### Mobile-first
-**Beautiful Jekyll** is designed to look great on both large-screen and small-screen (mobile) devices. Load up your site on your phone or your gigantic iMac, and the site will work well on both, though it will look slightly different.
+**주요 기술:** PHP, MySQL, jQuery Mobile, Linux, Apache
 
-### Customizable
+- 약 100명 규모 PHP·MySQL 그룹웨어 업무 기능과 jQuery Mobile 화면 개발
+- 사내 Linux 서버 환경 운영
 
-Many personalization settings in `_config.yml`, such as setting your name and site's description, changing the background colour/image, setting your avatar to add a little image in the navigation bar, customizing the links in the menus, customizing what social media links to show in the footer, etc.
+---
 
-### Allowing users to leave comments
+## 프리랜서·개인 프로젝트
 
-If you want to enable comments on your site, Beautiful Jekyll supports either the [Disqus](https://disqus.com/) comments plugin, [Facebook](https://developers.facebook.com/docs/plugins/comments) comments, [Staticman](https://staticman.net) or [JustComments](https://just-comments.com). If any of these are set in the configuration file, then all blog posts will have comments turned on by default. To turn off comments on a particular blog post, add `comments: false` to the YAML front matter. If you want to add comments on the bottom of a non-blog page, add `comments: true` to the YAML front matter.
+**웹·하이브리드 앱·API 개발**
 
-#### Disqus comments
+### 나무야 · 약 2개월
 
-To use Disqus, simply sign up to [Disqus](https://disqus.com/) and add your Disqus shortname to the `disqus` parameter in the `_config.yml` file.
+**담당:** Laravel 웹·API·WebView 앱 개발  
+**주요 기술:** Laravel, MySQL, React Native, TypeScript, WebView, FCM, Claude Code
 
-#### Facebook comments
+- Laravel 웹·API와 React Native·TypeScript WebView 앱의 인증·제안·채팅·알림 연동 개발
+- 제안 상태·시스템 메시지 저장을 DB 트랜잭션으로 묶고 커밋 후 알림 발송
+- 채팅 참여자 검사·읽음 상태·HTTP polling과 모바일 로그인·FCM 연결
+- 공통 함수·DB 구조·기획·UX를 Markdown으로 제공해 Claude Code 구현 기준 정리
 
-To use Facebook comments, create a Facebook app using [Facebook developers](https://developers.facebook.com/docs/apps/register), and add the Facebook App ID to the `fb_comment_id` parameter in `_config.yml`.
+### 숄더스 · 약 2개월
 
-#### Staticman comments
+**주요 기술:** PHP, JavaScript, MySQL
 
-To use Staticman, you first need to invite `staticmanlab` as a collaborator to your repository (by going to your repository **Settings** page, navigate to the **Collaborators** tab, and add the username `staticmanlab`), and then accept the invitation by going to `https://staticman3.herokuapp.com/v3/connect/github/<username>/<repo-name>`. Lastly, fill in the `staticman` parameters in the Staticman section of `_config.yml`. You may also choose a different Staticman instance other than `staticmanlab`.
+- 온라인·오프라인 수업 구매 웹의 수업·강사·지역별 검색 구현
+- 주문 정보 저장과 결제 결과 처리 개발
 
-Optional: You may want to configure a webhook to prevent old inactive branches (representing approved comments) from stacking up.  You can refer to [Staticman's documentation](https://staticman.net/docs/webhooks) for details.  Make sure to input the **Payload URL** according to your chosen `endpoint`.  For example, the default `endpoint` is `https://staticman3.herokuapp.com/v3/entry/github/`, so the corresponding **Payload URL** should be `https://staticman3.herokuapp.com/v1/webhook`.
+### 낚시 기록·환경 정보 서비스 · 개발 중
 
-#### JustComments
+**주요 기술:** TypeScript, React Native, Expo, Redux Toolkit, Next.js, React, MySQL
 
-To use JustComments you first need to have an account. After you just need to copy the API key to the `just-comments` property in `_config.yml` file.
+- React Native·Expo 앱과 Next.js 웹·MySQL 기반 관리자 기능 개발
+- 조석·날씨·수위 등 외부 환경 데이터 조회 API 연동
 
-### Adding Google Analytics to track page views
+---
 
-Beautiful Jekyll lets you easily add Google Analytics to all your pages. This will let you track all sorts of information about visits to your website, such as how many times each page is viewed and where (geographically) your users come from.  To add Google Analytics, simply sign up to [Google Analytics](https://www.google.com/analytics/) to obtain your Google Tracking ID, and add this tracking ID to the `google_analytics` parameter in `_config.yml`.
+## 학력·포트폴리오
 
-### Sharing blog posts on social media
+- 경성대학교 컴퓨터교육 석사 | 2010.03–2012.06
+- 동의대학교 컴퓨터공학 학사 | 2005.03–2009.02
+- [GitHub · ejung-park](https://github.com/ejung-park)
 
-By default, all blog posts will have buttons at the bottom of the post to allow people to share the current page on Twitter/Facebook/LinkedIn.  You can choose to enable/disable specific social media websites in the `_config.yml` file. You can also turn off the social media buttons on specific blog posts using `social-share: false` in the YAML front matter.
 
-### RSS feed
-
-Beautiful Jekyll automatically generates a simple RSS feed of your blog posts, to allow others to subscribe to your posts.  If you want to add a link to your RSS feed in the footer of every page, find the `rss: false` line in `_config.yml` and change it to `rss: true`.
-
-### Page types
-
-- **post** - To write a blog post, add a markdown or HTML file in the `_posts` folder. As long as you give it YAML front matter (the two lines of three dashes), it will automatically be rendered like a blog post. Look at the existing blog post files to see examples of how to use YAML parameters in blog posts.
-- **page** - Any page outside the `_posts` folder that uses YAML front matter will have a very similar style to blog posts.
-- **minimal** - If you want to create a page with minimal styling (ie. without the bulky navigation bar and footer), assign `layout: minimal` to the YAML front matter.
-- If you want to completely bypass the template engine and just write your own HTML page, simply omit the YAML front matter. Only do this if you know how to write HTML!
-
-### YAML front matter parameters
-
-These are the main parameters you can place inside a page's YAML front matter that **Beautiful Jekyll** supports.
-
-Parameter   | Description
------------ | -----------
-title       | Page or blog post title
-subtitle    | Short description of page or blog post that goes under the title
-tags        | List of tags to categorize the post. Separate the tags with commas and place them inside square brackets. Example: `[personal, self help, finance]`
-bigimg      | Include a large full-width image at the top of the page.  You can either give the path to a single image, or provide a list of images to cycle through (see [my personal website](https://deanattali.com/) as an example).
-comments    | If you want do add comments to a specific page, use `comments: true`. Comments are automatically enabled on blog posts; to turn comments off for a specific post, use `comments: false`. Comments only work if you enable at least one provider(diqus, staticman, just-comments) in `_config.yml` file.
-show-avatar | If you have an avatar configured in the `_config.yml` but you want to turn it off on a specific page, use `show-avatar: false`. If you want to turn it off by default, locate the line `show-avatar: true` in the file `_config.yml` and change the `true` to `false`; then you can selectively turn it on in specific pages using `show-avatar: true`.
-image       | If you want to add a personalized image to your blog post that will show up next to the post's excerpt and on the post itself, use `image: /path/to/img`.
-share-img   | If you want to specify an image to use when sharing the page on Facebook or Twitter, then provide the image's full URL here.
-social-share | If you don't want to show buttons to share a blog post on social media, use `social-share: false` (this feature is turned on by default).
-use-site-title | If you want to use the site title rather than page title as HTML document title (ie. browser tab title), use `use-site-title: true`. When set, the document title will take the format `Site Title - Site Description` (eg. `My website - A virtual proof that name is awesome!`). By default, it will use `Page Title` if it exists, or `Site Title` otherwise.
-layout      | What type of page this is (default is `post` for blog posts and `page` for other pages. You can use `minimal` if you don't want a header and footer)
-js          | List of local JavaScript files to include in the page (eg. `/js/mypage.js`)
-ext-js      | List of external JavaScript files to include in the page (eg. `//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.2/underscore-min.js`). External JavaScript files that support [Subresource Integrity (SRI)](https://developer.mozilla.org/en-US/docs/Web/Security/Subresource_Integrity) can be specified using the `href` and `sri` parameters eg.<br/>`href: "//code.jquery.com/jquery-3.1.1.min.js"`<br/>`sri: "sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="`
-css         | List of local CSS files to include in the page
-ext-css      | List of external CSS files to include in the page. External CSS files using SRI (see `ext-js` parameter) are also supported.
-googlefonts | List of Google fonts to include in the page (eg. `["Monoton", "Lobster"]`)
-gh-repo   | If you want to show GitHub buttons at the top of a post, this sets the GitHub repo name (eg. `daattali/beautiful-jekyll`). You must also use the `gh-badge` parameter to specify what buttons to show.
-gh-badge  | Select which GitHub buttons to display, available options are: [star, watch, fork, follow]. You must also use the `gh-repo` parameter to specify the GitHub repo.
-
-### Advanced features (including how to use a custom URL address for your site)
-
-I wrote [a blog post](https://deanattali.com/2015/03/12/beautiful-jekyll-how-to-build-a-site-in-minutes/) describing some more advanced features that I used in my website that are applicable to any Jekyll site.  It describes how I used a custom URL for my site (deanattali.com instead of daattali.github.io), how to add a Google-powered search into your site, and provides a few more details about having an RSS feed.
-
-## Creating a User Page vs a Project Page
-
-If you're not sure what the difference is, you can probably safely ignore this section.
-
-If you want to use this theme to host a website that will be available at `https://YOURUSERNAME.github.io`, then you do not need to read this section. That is called a User Page, you can only have one User Page in your GitHub account, and it is what you get by default when forking this project.
-
-If you want to use this theme to create a website for a particular repository, it will be available at `https://YOURUSERNAME.github.io/PROJECTNAME`, and that is called a [Project Page](https://help.github.com/articles/user-organization-and-project-pages/). You can have a Project Page for any repository you have on GitHub.
-
-**When using this theme for a Project Page, by default your website will be served from the `gh-pages` branch**, so you must take the following steps: 
-
-1. [Delete the existing `gh-pages` branch](https://help.github.com/en/articles/creating-and-deleting-branches-within-your-repository#deleting-a-branch)
-
-2. [Create a new branch named `gh-pages` from the `master` branch](https://help.github.com/en/articles/creating-and-deleting-branches-within-your-repository#creating-a-branch)
-
-Alternatively, instead of the above two steps, you can opt to use the `master` branch instead of `gh-pages` branch as your website's source by choosing that option in the main Settings page. 
-
-## Showcased users (success stories!)
-
-To my huge surprise, Beautiful Jekyll has been used in over 500 websites in its first 6 months alone! Here is a hand-picked selection of some websites that use Beautiful Jekyll.
-
-Want your website featured here? [Contact me](https://deanattali.com/aboutme#contact) to let me know about your website.
-
-### Project/company websites
-
-| Website | Description |
-| :------ |:----------- |
-| [repidemicsconsortium.org/](https://www.repidemicsconsortium.org/) | R Epidemics Consortium |
-| [vaccineimpact.org](https://www.vaccineimpact.org/) | Vaccine Impact Modelling Consortium |
-| [derekogle.com/fishR](http://derekogle.com/fishR/) | Using R for Fisheries Analyses |
-| [bigdata.juju.solutions](http://bigdata.juju.solutions) | Creating Big Data solutions Juju Solutions |
-| [joecks.github.io/clipboard-actions](http://joecks.github.io/clipboard-actions/) | Clipboard Actions - an Android app |
-| [deanattali.com/shinyjs](http://deanattali.com/shinyjs/) | shinyjs - an R package |
-| [blabel.github.io](http://blabel.github.io) | Library for canonicalising blank node labels in RDF graphs |
-| [reactionic.github.io](http://reactionic.github.io) | Create iOS and Android apps with React and Ionic |
-| [ja2-stracciatella.github.io](http://ja2-stracciatella.github.io) | Jagged Alliance 2 Stracciatella |
-| [ddocent.com](http://ddocent.com/) | RADSeq Bioinformatics and Beyond |
-| [guitarlessons.org](https://www.guitarlessons.org/) | Free online guitar lessons for all |
-| [terremotocentroitalia.info](https://www.terremotocentroitalia.info/) | Information about the 2016 Italy earthquake |
-
-
-### Personal websites
-
-| Website | Who | What |
-| :------ |:--- | :--- |
-| [deanattali.com](https://deanattali.com) | Dean Attali | Creator of Beautiful Jekyll |
-| [ouzor.github.io](http://ouzor.github.io) | Juuso Parkkinen | Data scientist |
-| [derekogle.com](http://derekogle.com/) | Derek Ogle | Professor of Mathematical Sciences and Natural Resources |
-| [melyanna.github.io](http://melyanna.github.io/) | Melyanna | Shows off her nice art |
-| [chauff.github.io](http://chauff.github.io/) | Claudia Hauff | Professor at Delft University of Technology |
-| [kootenpv.github.io](http://kootenpv.github.io/) | Pascal van Kooten | Data analytics |
-| [sjackman.ca](http://sjackman.ca) | Shaun Jackman | PhD candidate in bioinformatics |
-| [anudit.in](http://www.anudit.in/) | Anudit Verma | Engineering student |
-| [sharepointoscar.github.io](http://sharepointoscar.github.io) | Oscar Medina | Independent Hacker |
-| [ocram85.com](https://ocram85.com) | Marco Blessing | A personal blog about PowerShell and automation |
-| [khanna.cc](https://khanna.cc/) | Harry Khanna | Law and software |
-
-## Advanced: Local development using Docker
-
-Beautiful Jekyll is meant to be so simple to use that you can do it all within the browser. However, if you'd like to develop locally on your own machine, that's possible too if you're comfortable with command line. Follow these simple steps set that up with Docker:
-
-1. Make sure you have [Docker](https://www.docker.com/) installed.
-
-2. Clone your repository locally.
-
-    ```bash
-    git clone https://github.com/<your_username>/<your_username>.github.io.git
-    ```
-
-3. Run the following shell commands to build the docker image and start the container for the first time:
-
-    ```bash
-    cd <repository_folder>
-    docker build -t beautiful-jekyll "$PWD"
-    docker run -d -p 4000:4000 --name beautiful-jekyll -v "$PWD":/srv/jekyll beautiful-jekyll
-    ```
-
-
-Now that Docker is set up, you do not need to run the above steps again. You can now view your website at http://localhost:4000/. You can start the container again in the future with:
-
-```bash
-docker start beautiful-jekyll
-```
-
-And you can stop the server with:
-
-```bash
-docker stop beautiful-jekyll
-```
-
-Whenever you make any changes to `_config.yml`, you must stop and re-start the server for the new config settings to take effect.
-
-Disclaimer: I personally am NOT using local development so I don't know much about running Jekyll locally. If you follow this route, please don't ask me questions because unfortunately I honestly won't be able to help!
-
-## FAQ and support
-
-If you need any help, I suggest heading over to the [Jekyll support forum](https://talk.jekyllrb.com/).
-
-Beautiful Jekyll is actively used by thousands of people with wildly varying degrees of competency, so it's impossible to answer all the questions that may arise. Below are answers to a few very common questions. Most questions that I get asked are not directly related to this theme, and instead are more general questions about Jekyll or web development. Many such questions can be answered by reading the [Jekyll documentation](https://jekyllrb.com/) or with Google.
-
-#### How do I change the number of posts per page OR the colour of the navigation bar OR the image in the navigation bar OR ...?
-
-Beautiful Jekyll is built to be very customizable, and as such, many questions about "how do I change ..." can be answered by looking at the `_config.yml` file. The configuration file has many adjustable parameters to customize your site.
-
-#### How do I add a favicon to my site?
-
-Easy! Just place a valid `favicon.ico` (or another valid favicon image) in the root directory of your project. And then wait! It can take a while to update.
-
-#### How do I move the blog to another page instead of having it on the home page?
-
-The default style of Beautiful Jekyll is to feature the blog feed on the front page. But for many sites that's not the ideal structure, and you may want to have a separate dedicated page for the blog posts. To have the blog hosted on a different URL (for example at `<mysite.com>/blog`), copy the `index.html` file into a folder with the same name as the desired page (for example, to `blog/index.html`), and in the `_config.yml` file you need to add a parameter `paginate_path: "/<page name>/page:num/"` (for example `paginate_path: "/blog/page:num/"`).
-
-#### What size do you recommend using for the `bigimg` photos?
-
-Unfortunately, this is a no-answer! There isn't a one-size-fits-all solution to this, because every person will view your site on a different browser with different dimensions. Some browsers will have very wide aspect ratio, some will be narrower, some will be vertical (such as phones), different phones have different screens, etc. The image will always be centered, so the only tip I can give is that you should make sure the important part of the image is in the middle so that it'll always show. Other than that, every browser will show a different clipping of the image.
-
-#### How do I use MathJax equations in my posts?
-
-MathJax can be easily integrated into your website with a one-line addition. You can see [this discussion](https://github.com/daattali/beautiful-jekyll/issues/195) for more information.
-
-#### My project page appear to be broken after a recent update!
-
-In June 2019, some URL related settings have been adjusted to be more in-line with how Jekyll uses them officially. Project Page absolute links might appear to be broken if you haven't propagated all necessary changes to your local templates, or if you have created additional templates making use of old settings. If a link contains a duplicated project path component, this is most likely the cause. In summary:
-
-| &nbsp; | Old behavior | New behavior |
-| --- | --- | --- |
-| `url` setting | `https://user.github.io/projectname` | (unset, GitHub auto detects) |
-| `baseurl` setting | `/projectname` | (unset, GitHub auto detects) |
-| Absolute link construction | `{{ site.url }}/your/path` | `{{ '/your/path' \| absolute_url }}` |
-| Relative link construction | `{{ site.baseurl }}/your/path` | `{{ '/your/path' \| relative_url }}` |
-
-## Credits
-
-This template was not made entirely from scratch. I would like to give special thanks to:
-- [Barry Clark](https://github.com/barryclark) and his project [Jekyll Now](https://github.com/barryclark/jekyll-now), from whom I've taken several ideas and code snippets, as well as some documenation tips.
-- [Iron Summit Media](https://github.com/IronSummitMedia) and their project [Bootstrap Clean Blog](https://github.com/IronSummitMedia/startbootstrap-clean-blog), from which I've used some design ideas and some of the templating code for posts and pagination.
-
-I'd also like to thank [Dr. Jekyll's Themes](https://drjekyllthemes.github.io/), [Jekyll Themes](http://jekyllthemes.org/), and another [Jekyll Themes](http://jekyllrc.github.io/jekyllthemes/) for featuring Beautiful Jekyll in their Jekyll theme directories.
-
-## Contributions
-
-If you find anything wrong or would like to contribute in any way, feel free to create a pull request/open an issue/send me a message.  Any comments are welcome!
-
-Thank you to [all contributors](https://github.com/daattali/beautiful-jekyll/graphs/contributors). Special thanks to  [@OCram85](https://github.com/OCram85) and [@abelcheung](https://github.com/abelcheung) for contributing multiple times as well as helping with discussions.
-
-If you do fork or clone this project to use as a template for your site, I would appreciate if you keep the link in the footer to this project.  I've noticed that several people who forked this repo removed the attribution and I would prefer to get the recognition if you do use this :)
-
-## Known limitations
-
-- If you have a project page and you want a custom 404 page, you must have a custom domain.  See https://help.github.com/articles/custom-404-pages/.  This means that if you have a regular User Page you can use the 404 page from this theme, but if it's a website for a specific repository, the 404 page will not be used.
-
-- If there are many navigation bar links and avatar, some of the links may get partially hidden behind the avatar. 
