@@ -48,6 +48,12 @@ gtag('config', 'G-SZMCM50WWT');
   .kpi{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px}
   .kpi .n{font-size:26px;font-weight:700;color:var(--accent);letter-spacing:-.02em}
   .kpi .l{color:var(--muted);font-size:14px}
+  .hl{list-style:none;margin:0;padding:0;counter-reset:hl}
+  .hl li{counter-increment:hl;display:grid;grid-template-columns:34px 1fr;gap:12px;padding:16px 0;border-top:1px solid var(--line)}
+  .hl li:first-child{border-top:0;padding-top:0}
+  .hl li::before{content:counter(hl,decimal-leading-zero);color:var(--accent);font-weight:700;font-size:15px;padding-top:2px}
+  .hl b{display:block;font-size:17px;margin-bottom:4px;letter-spacing:-.01em}
+  .hl span{color:var(--muted);font-size:15px}
   .tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
   .tag{background:var(--tag);border-radius:999px;padding:3px 10px;font-size:13px;color:var(--muted)}
   .media{display:flex;flex-wrap:wrap;gap:8px 14px;margin-top:10px;font-size:14px}
@@ -95,12 +101,12 @@ gtag('config', 'G-SZMCM50WWT');
 <section id="highlights">
   <div class="wrap">
     <h2>대표 성과</h2>
-    <div class="kpi">
-      <div class="card"><div class="n">10초 → 1.5초</div><div class="l">인수한 예약 서비스의 회원 화면 로딩. EXPLAIN·슬로우 쿼리 분석과 인덱스 보강</div></div>
-      <div class="card"><div class="n">반나절 → 목록 입력</div><div class="l">PM이 컷마다 반복하던 원본 처리(200~300컷/회)를 Excel 목록 기반 일괄 처리로 전환</div></div>
-      <div class="card"><div class="n">19개 프로젝트</div><div class="l">웹·앱 에이전시에서 팀장으로 개발·관리·인계한 고객사 프로젝트(인수인계 목록 기준)</div></div>
-      <div class="card"><div class="n">약 100명 · 약 200명</div><div class="l">두 조직의 그룹웨어를 결재·조직도·사규 분석부터 전체 개발·운영까지</div></div>
-    </div>
+    <ol class="hl">
+      <li><b>담당자 퇴사로 멈춘 예약 서비스를 인수해 정상화</b><span>수업과 예약이 뒤섞인 데이터 구조를 재설계하고 회원·직원·관리자 화면을 개편. 회원 화면 로딩 10초 이상을 약 1.5초로 줄였고, 6개월 협의 일정 안에 완료해 후속 프로젝트 수주로 이어짐</span></li>
+      <li><b>한진택배 원클릭과 연계한 다중 판매자 쇼핑몰을 개발해 한진에 인계</b><span>판매자마다 다른 배송비·결제 설정, 결제 금액 검증, 지역 코드 기반 배송 요금, 택배 접수·운송장 추적을 연동. 앱용 API 89개와 화면 168개 규모로 한진 서버에 이관, 현재 운영 중</span></li>
+      <li><b>VFX 제작 부서 전체를 인터뷰해 제작 파이프라인 환경을 구축</b><span>부서별 결과물에 맞는 도구를 직접 개발하고 파일·경로·버전 규약을 통일. PM이 컷마다 반복하던 원본 처리(한 번에 200~300컷, 반나절 이상)를 목록 입력 후 일괄 처리로 전환</span></li>
+      <li><b>한국·베트남 전 직원이 쓰는 타임로그와 인사평가 시스템을 개발·운영</b><span>작업 파일을 열고 작업하는 시간을 자동 기록하고, 해외 지사의 API 지연을 이벤트 기반 캐시로 해소. 인사평가에는 사내 GPU 서버의 로컬 LLM(Ollama)을 연동해 영어·베트남어 평가 의견을 번역·요약</span></li>
+    </ol>
   </div>
 </section>
 
