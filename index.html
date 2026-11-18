@@ -1,72 +1,267 @@
----
-layout: page
-title: My website
-subtitle: This is where I will tell my friends way too much about me
-use-site-title: true
----
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>박이정 · 풀스택 개발자</title>
+<meta name="description" content="업무 도메인을 이해하고 프론트엔드까지 직접 구현하는 13년 차 풀스택 개발자 박이정의 포트폴리오. React Native, React, TypeScript, PHP, Python.">
+<style>
+  :root{
+    --bg:#ffffff; --fg:#1b1f24; --muted:#5b6470; --line:#e6e9ee; --card:#f7f8fa; --accent:#1f5fff; --accent-soft:#e9efff; --tag:#eef1f5;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){ --bg:#0f1115; --fg:#e8eaee; --muted:#9aa3ae; --line:#262b33; --card:#171a20; --accent:#7aa2ff; --accent-soft:#1b2440; --tag:#1f242c; }
+  }
+  :root[data-theme="dark"]{ --bg:#0f1115; --fg:#e8eaee; --muted:#9aa3ae; --line:#262b33; --card:#171a20; --accent:#7aa2ff; --accent-soft:#1b2440; --tag:#1f242c; }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--bg);color:var(--fg);font-family:-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Pretendard","Noto Sans KR","Segoe UI",Roboto,sans-serif;line-height:1.65;font-size:16px;word-break:keep-all}
+  a{color:var(--accent);text-decoration:none}
+  a:hover{text-decoration:underline}
+  .wrap{max-width:900px;margin:0 auto;padding:0 16px}
+  header.hero{padding:56px 0 28px;border-bottom:1px solid var(--line)}
+  .hero h1{margin:0 0 6px;font-size:30px;letter-spacing:-.01em}
+  .hero .role{font-size:19px;font-weight:600;margin:0 0 10px}
+  .hero .lead{color:var(--muted);margin:0 0 18px;max-width:720px}
+  .links{display:flex;flex-wrap:wrap;gap:8px 18px;font-size:15px}
+  .links span{color:var(--muted)}
+  nav.toc{position:sticky;top:0;background:var(--bg);border-bottom:1px solid var(--line);z-index:5}
+  nav.toc .wrap{display:flex;gap:4px;overflow-x:auto;padding:8px 16px;scrollbar-width:none}
+  nav.toc a{white-space:nowrap;padding:6px 10px;border-radius:999px;font-size:14px;color:var(--muted)}
+  nav.toc a:hover{background:var(--tag);text-decoration:none;color:var(--fg)}
+  section{padding:40px 0;border-bottom:1px solid var(--line)}
+  h2{font-size:22px;margin:0 0 18px;letter-spacing:-.01em}
+  h3{font-size:17px;margin:0 0 6px}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px}
+  .card .meta{color:var(--muted);font-size:14px;margin:0 0 10px}
+  .card ul{margin:0;padding-left:18px}
+  .card li{margin:4px 0}
+  .kpi{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px}
+  .kpi .n{font-size:26px;font-weight:700;color:var(--accent);letter-spacing:-.02em}
+  .kpi .l{color:var(--muted);font-size:14px}
+  .tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
+  .tag{background:var(--tag);border-radius:999px;padding:3px 10px;font-size:13px;color:var(--muted)}
+  .media{display:flex;flex-wrap:wrap;gap:8px 14px;margin-top:10px;font-size:14px}
+  .timeline{list-style:none;margin:0;padding:0}
+  .timeline li{display:grid;grid-template-columns:150px 1fr;gap:12px;padding:14px 0;border-top:1px solid var(--line)}
+  .timeline li:first-child{border-top:0}
+  .timeline .when{color:var(--muted);font-size:14px;padding-top:3px}
+  .timeline .what b{display:block}
+  .timeline .what span{color:var(--muted);font-size:14px}
+  .stack dl{display:grid;grid-template-columns:140px 1fr;gap:8px 14px;margin:0}
+  .stack dt{color:var(--muted);font-size:14px;padding-top:2px}
+  .stack dd{margin:0}
+  footer{padding:28px 0 48px;color:var(--muted);font-size:14px}
+  .note{background:var(--accent-soft);border-radius:10px;padding:12px 14px;font-size:14px}
+  @media (max-width:560px){
+    .hero h1{font-size:26px}
+    .timeline li{grid-template-columns:1fr}
+    .stack dl{grid-template-columns:1fr}
+  }
+</style>
+</head>
+<body>
 
-<div class="posts-list">
-  {% for post in paginator.posts %}
-  <article class="post-preview">
-    <a href="{{ post.url | relative_url }}">
-	  <h2 class="post-title">{{ post.title }}</h2>
-
-	  {% if post.subtitle %}
-	  <h3 class="post-subtitle">
-	    {{ post.subtitle }}
-	  </h3>
-	  {% endif %}
-    </a>
-
-    <p class="post-meta">
-      Posted on {{ post.date | date: site.date_format }}
-    </p>
-
-    <div class="post-entry-container">
-      {% if post.image %}
-      <div class="post-image">
-        <a href="{{ post.url | relative_url }}">
-          <img src="{{ post.image | relative_url }}">
-        </a>
-      </div>
-      {% endif %}
-      <div class="post-entry">
-        {{ post.excerpt | strip_html | xml_escape | truncatewords: site.excerpt_length }}
-        {% assign excerpt_word_count = post.excerpt | number_of_words %}
-        {% if post.content != post.excerpt or excerpt_word_count > site.excerpt_length %}
-          <a href="{{ post.url | relative_url }}" class="post-read-more">[Read&nbsp;More]</a>
-        {% endif %}
-      </div>
+<header class="hero">
+  <div class="wrap">
+    <h1>박이정 <span style="font-weight:400;color:var(--muted);font-size:18px">Park E-Jung</span></h1>
+    <p class="role">업무 도메인을 이해하고 프론트엔드까지 직접 구현하는 풀스택 개발자</p>
+    <p class="lead">예약·결제·결재·근태·인사평가 같은 현업 규칙을 데이터 구조와 화면 흐름으로 옮겨 시스템을 설계·개발해 온 13년 차 개발자입니다. React Native·React·TypeScript 프론트와 PHP·Laravel·Python 백엔드를 한 사람이 끝까지 맡아 배포와 인계까지 마무리합니다.</p>
+    <div class="links">
+      <a href="mailto:ppp.ejung@gmail.com">ppp.ejung@gmail.com</a>
+      <a href="https://github.com/ejung-park" target="_blank" rel="noopener">github.com/ejung-park</a>
+      <span>경기 고양시 · 서울 서북권 출퇴근 · 재택 선호</span>
     </div>
+  </div>
+</header>
 
-    {% if post.tags.size > 0 %}
-    <div class="blog-tags">
-      Tags:
-      {% if site.link-tags %}
-      {% for tag in post.tags %}
-      <a href="{{ '/tags' | relative_url }}#{{- tag -}}">{{- tag -}}</a>
-      {% endfor %}
-      {% else %}
-        {{ post.tags | join: ", " }}
-      {% endif %}
+<nav class="toc"><div class="wrap">
+  <a href="#highlights">대표 성과</a>
+  <a href="#projects">프로젝트</a>
+  <a href="#stack">기술</a>
+  <a href="#career">경력</a>
+  <a href="#edu">학력·수상</a>
+</div></nav>
+
+<section id="highlights">
+  <div class="wrap">
+    <h2>대표 성과</h2>
+    <div class="kpi">
+      <div class="card"><div class="n">10초 → 1.5초</div><div class="l">인수한 예약 서비스의 회원 화면 로딩. EXPLAIN·슬로우 쿼리 분석과 인덱스 보강</div></div>
+      <div class="card"><div class="n">반나절 → 목록 입력</div><div class="l">PM이 컷마다 반복하던 원본 처리(200~300컷/회)를 Excel 목록 기반 일괄 처리로 전환</div></div>
+      <div class="card"><div class="n">19개 프로젝트</div><div class="l">웹·앱 에이전시에서 팀장으로 개발·관리·인계한 고객사 프로젝트(인수인계 목록 기준)</div></div>
+      <div class="card"><div class="n">약 100명 · 약 200명</div><div class="l">두 조직의 그룹웨어를 결재·조직도·사규 분석부터 전체 개발·운영까지</div></div>
     </div>
-    {% endif %}
+  </div>
+</section>
 
-   </article>
-  {% endfor %}
-</div>
+<section id="projects">
+  <div class="wrap">
+    <h2>프로젝트</h2>
+    <div class="grid">
 
-{% if paginator.total_pages > 1 %}
-<ul class="pager main-pager">
-  {% if paginator.previous_page %}
-  <li class="previous">
-    <a href="{{ paginator.previous_page_path | relative_url }}">&larr; Newer Posts</a>
-  </li>
-  {% endif %}
-  {% if paginator.next_page %}
-  <li class="next">
-    <a href="{{ paginator.next_page_path | relative_url }}">Older Posts &rarr;</a>
-  </li>
-  {% endif %}
-</ul>
-{% endif %}
+      <article class="card">
+        <h3>한진 디지털 이지오더</h3>
+        <p class="meta">디몬스터 · 한진택배 원클릭 연계 다중 판매자 쇼핑몰 · 회원 앱·판매자 앱·관리자 웹·API</p>
+        <ul>
+          <li>판매자마다 상품·배송비 정책·아임포트 결제 설정이 다른 구조. 장바구니·주문·정산을 판매자 단위로 분리하고, 결제 금액을 아임포트 조회로 검증해 불일치 시 자동 취소</li>
+          <li>한진 원클릭 API로 판매자 로그인·승인 상태 확인, 박스 단위 택배 접수·운송장 발행, 지역 코드 기반 배송 가능 여부·도서산간 추가 요금 계산, cron으로 집하·배송완료 상태 자동 갱신</li>
+          <li>여러 배송지 주문·선물하기, 카카오 알림톡·SMS·FCM, 채팅, 쿠폰·포인트, 교환·반품·취소 클레임, 판매자 정산·세금계산서, 관리자 통계</li>
+          <li>규모: 앱용 API 89개, 판매자 웹 78개 화면, 관리자 웹 90개 화면, DB 테이블 52개. 한진 서버로 이관해 인계, 현재 한진에서 운영 중</li>
+        </ul>
+        <div class="tags"><span class="tag">PHP</span><span class="tag">MySQL</span><span class="tag">React Native WebView</span><span class="tag">FCM</span><span class="tag">아임포트</span><span class="tag">한진 원클릭 API</span><span class="tag">카카오 알림톡</span></div>
+        <div class="media"><a href="https://www.hanjineasyorder.com" target="_blank" rel="noopener">서비스</a><a href="https://youtu.be/WNo20iBrDKA" target="_blank" rel="noopener">시연 영상</a><a href="https://www.logi-ducks.com" target="_blank" rel="noopener">한진 로지덕스</a><a href="https://youtu.be/BPTz8NFPvgs" target="_blank" rel="noopener">로지덕스 영상</a></div>
+      </article>
+
+      <article class="card">
+        <h3>타임로그 · 컷·작업별 투입 시간 자동 기록</h3>
+        <p class="meta">스톤브이스튜디오 · 한국 본사·베트남 지사 전 직원 · 설계와 대부분의 구현, 배포·운영</p>
+        <ul>
+          <li>활성 창·프로세스·작업 파일명을 사용자의 Task와 매핑하고 입력 활동으로 실제 작업 여부를 판단. 입력 무활동 5분, 작업 프로그램 이탈 10분 조건으로 기록 제어</li>
+          <li>기록·Task 캐시·파일 매핑을 사용자 PC의 SQLite에 저장하고 백그라운드 스레드가 중앙 MySQL로 전송. 서버에 저장된 기록만 전송 완료로 표시, 실패 기록은 다음 동기화에서 재처리</li>
+          <li>베트남 지사의 ShotGrid API 조회 지연을 Event Daemon 플러그인 기반 사내 MySQL 캐시로 해소. 집계된 투입 시간을 인사평가의 배정 시간 대비 지표에 연결</li>
+        </ul>
+        <div class="tags"><span class="tag">Python</span><span class="tag">PySide2</span><span class="tag">Windows API</span><span class="tag">SQLite</span><span class="tag">MySQL</span><span class="tag">ShotGrid Event Daemon</span></div>
+      </article>
+
+      <article class="card">
+        <h3>인사평가 시스템 + 로컬 LLM 번역·요약</h3>
+        <p class="meta">스톤브이스튜디오 · 지사·조직별 연간 평가 · 시스템 전체 개발, Ollama 연동, Docker 배포</p>
+        <ul>
+          <li>연도별 평가 질문·평가자–대상자 관계 관리, 항목별 점수·가중치·평균 산출, 결과 조회·Excel 출력. ShotGrid 배정 시간과 타임로그 실투입 시간을 비교한 초과·리테이크·승인 지표</li>
+          <li>사내 보안 정책으로 외부 AI API 사용 불가. 사내 GPU 서버의 Ollama를 PHP 시스템에 연동해 영어·베트남어 평가 의견을 한국어로 번역·요약. 자기신고서는 요약 입력에서 제외하고, 번역 실패 시 원문 유지, 원문·번역·요약 구분 저장, 진행률·성공/실패 건수 표시</li>
+        </ul>
+        <div class="tags"><span class="tag">PHP</span><span class="tag">MySQL</span><span class="tag">JavaScript</span><span class="tag">Docker</span><span class="tag">Ollama</span></div>
+      </article>
+
+      <article class="card">
+        <h3>제작 파이프라인 환경 구축</h3>
+        <p class="meta">스톤브이스튜디오 · 리깅·룩뎁·애니메이션·FX·컴포지팅 부서 인터뷰 → 부서별 도구 개발</p>
+        <ul>
+          <li>부서 간 파일·경로·버전 규약을 합의하고 전 직원용 Maya 퍼블리시(명명 검사, Scene·Alembic·FBX 내보내기, ShotGrid 등록)와 로더(Reference·Import·GPU Cache, 룩뎁 셰이더 적용) 개발</li>
+          <li>ShotGrid Toolkit 훅 확장으로 Maya·Nuke 프로젝트별 작업 환경(경로·FPS·프레임 범위·해상도·OCIO) 자동 설정</li>
+          <li>PM 원본 처리 일괄 자동화: Excel 작업 목록 → Nuke 작업 생성 → Deadline 실행 → JPG·MOV 배치 → ShotGrid 등록. 한 번에 200~300컷, 반나절 이상 걸리던 수작업을 목록 입력과 결과 확인으로 전환</li>
+          <li>제작 프로그램별 Python 호환성 검증과 공통 모듈·배포 경로·업데이트 중앙 관리(Rez)</li>
+        </ul>
+        <div class="tags"><span class="tag">Python</span><span class="tag">Maya·Nuke API</span><span class="tag">ShotGrid Toolkit</span><span class="tag">Deadline</span><span class="tag">OCIO</span><span class="tag">Rez</span></div>
+      </article>
+
+      <article class="card">
+        <h3>블랭크 · 필라테스 예약·수업 관리 정상화</h3>
+        <p class="meta">디몬스터 · 담당자 퇴사 후 인수 · 재설계·고객 협의·개발·배포 주도</p>
+        <ul>
+          <li>수업과 회원 예약이 분리되지 않고 예약 데이터에서 수업 상태까지 관리하던 구조를 발견. 데이터와 상태를 분리해 재설계하고 회원 예약 UI·UX와 직원·관리자 화면 개편</li>
+          <li>수정 범위와 영향을 고객에게 설명해 6개월 추가 일정 협의. 배포 후 10초 이상 걸리던 회원 화면을 EXPLAIN·슬로우 쿼리 분석과 인덱스 추가로 약 1.5초로 단축</li>
+          <li>고객 신뢰 회복, 후속 프로젝트 수주로 연결</li>
+        </ul>
+        <div class="tags"><span class="tag">PHP</span><span class="tag">MySQL</span><span class="tag">React Native WebView</span></div>
+        <div class="media"><a href="https://nrblank.com" target="_blank" rel="noopener">서비스</a></div>
+      </article>
+
+      <article class="card">
+        <h3>도수 예약 앱 · 소문난명의 / 도수는약손</h3>
+        <p class="meta">디몬스터 · React Native 사용자 앱 + 병원 스케줄 관리 웹 + PHP API</p>
+        <ul>
+          <li>병원·치료사·날짜·시간 기반 예약, 검색·리뷰·예약 내역·취소, 마감 시간대 대기 신청과 취소 발생 시 알림</li>
+          <li>API로 받은 리뷰·예약 데이터를 Redux store로 화면 간 공유. 서버가 보낸 예약 알림 정보·예정 시각을 앱의 로컬 알림으로 등록해 지정 시각에 표시</li>
+          <li>iOS App Store·Android 마켓 심사 통과 후 배포·인계, 이후 다년간 서비스에 사용</li>
+        </ul>
+        <div class="tags"><span class="tag">React Native</span><span class="tag">Redux</span><span class="tag">PHP</span><span class="tag">MySQL</span><span class="tag">FCM</span><span class="tag">로컬 알림</span></div>
+        <div class="media"><a href="https://youtu.be/RbseARV3Du8" target="_blank" rel="noopener">도수는약손 영상</a><a href="https://youtu.be/fXlc2TVZXX0" target="_blank" rel="noopener">소문난명의 영상</a></div>
+      </article>
+
+      <article class="card">
+        <h3>텐더스비 · 다중 상점 결제와 웹·네이티브 연동</h3>
+        <p class="meta">디몬스터 · 식음료 쇼핑 웹 + React Native WebView 앱</p>
+        <ul>
+          <li>상점별 아임포트 상점 ID 기반 결제·결제 내역 관리, 통합 관리자의 전체 상점 결제 조회·취소</li>
+          <li>JSON 메시지 브리지로 네이버·카카오 로그인, 위치 조회, FCM 권한·토큰 전달과 앱 실행 상태별 알림 진입, WebView 내 이동·뒤로가기·외부 URL 구분 처리</li>
+        </ul>
+        <div class="tags"><span class="tag">PHP</span><span class="tag">React Native</span><span class="tag">WebView</span><span class="tag">FCM</span><span class="tag">아임포트</span></div>
+        <div class="media"><a href="https://tendersbee.com" target="_blank" rel="noopener">서비스</a><a href="https://youtu.be/KZahq9Icyxo" target="_blank" rel="noopener">시연 영상</a></div>
+      </article>
+
+      <article class="card">
+        <h3>이이에스 · 선박 운항·연료·배출량 계산</h3>
+        <p class="meta">디몬스터 · 처음 접한 선박 도메인의 수식을 공통 함수로</p>
+        <ul>
+          <li>운항 거리·연료 소비량 집계와 연료별 변환계수 기반 배출량 계산. 선박 종류·용량·보정계수를 반영한 AER·CII 기준선·연도별 요구값·A~E 등급 산출, 성능 데이터 보간</li>
+          <li>계산을 공통 함수로 구성해 웹 조회 화면과 EU MRV Excel 보고서가 같은 함수를 사용</li>
+        </ul>
+        <div class="tags"><span class="tag">PHP</span><span class="tag">MySQL</span><span class="tag">외부 API</span><span class="tag">Excel 출력</span></div>
+        <div class="media"><a href="https://ees.co.kr" target="_blank" rel="noopener">서비스</a></div>
+      </article>
+
+      <article class="card">
+        <h3>그룹웨어 2종 · 결재·경비·근태</h3>
+        <p class="meta">포스크리에이티브파티(약 200명) · 에이지웍스(약 100명) · 기획부터 전체 개발·운영</p>
+        <ul>
+          <li>결재 문서·조직도·사규를 분석해 전자결재와 업무 화면 기획·개발. 모바일에서 경비를 수시 입력하고 제출 시 누적 내역 자동 취합</li>
+          <li>세콤 출입 데이터 수신용 MySQL 서버와 DB 트리거로 근태·휴가·연장근무·대체휴가 등 사규 적용과 작업자 일정 연계</li>
+          <li>제작 작업·인력 일정 관리 시스템(특허 출원 진행)을 주제로 한 논문으로 2017년 KOCCA 우수논문상 공저 수상</li>
+        </ul>
+        <div class="tags"><span class="tag">PHP</span><span class="tag">MySQL</span><span class="tag">jQuery</span><span class="tag">모바일 웹</span><span class="tag">ShotGrid API</span></div>
+      </article>
+
+      <article class="card">
+        <h3>나무야 · 만조노트 (프리랜서·개인)</h3>
+        <p class="meta">최근 프로젝트는 TypeScript</p>
+        <ul>
+          <li>나무야(중고 거래·판매 관리, 약 2개월): React Native·TypeScript WebView 앱 + Laravel 웹·API. 제안 수락 시 상태 변경·채팅방 생성·시스템 메시지 저장을 하나의 DB 트랜잭션으로 묶고 알림은 커밋 후 별도 처리. 공통 함수·DB 구조·UX 기준을 문서로 정리해 Claude Code 구현 기준으로 제공</li>
+          <li>만조노트(낚시 기록·환경 정보, 개발 중): React Native·Expo·TypeScript 앱, Next.js 웹·관리자, 조석·날씨·수위 외부 API 연동</li>
+        </ul>
+        <div class="tags"><span class="tag">TypeScript</span><span class="tag">React Native</span><span class="tag">Expo</span><span class="tag">Next.js</span><span class="tag">Laravel</span><span class="tag">Claude Code</span></div>
+      </article>
+
+    </div>
+    <p class="note" style="margin-top:14px">소스 코드는 고객사·전 직장 자산이라 공개하지 않습니다. 구조와 설계 판단은 면접에서 도식으로 설명드릴 수 있습니다.</p>
+  </div>
+</section>
+
+<section id="stack" class="stack">
+  <div class="wrap">
+    <h2>기술</h2>
+    <dl>
+      <dt>프론트·앱</dt><dd>React Native(Expo·WebView), React, Next.js, TypeScript, JavaScript, Redux·Redux Toolkit, React Navigation, jQuery</dd>
+      <dt>모바일 연동</dt><dd>FCM, 로컬 알림, 딥링크, 네이버·카카오 로그인, WebView 메시지 브리지, iOS·Android 스토어 심사·배포</dd>
+      <dt>백엔드·API</dt><dd>PHP, Laravel, REST/JSON API, Python</dd>
+      <dt>데이터베이스</dt><dd>MySQL, MariaDB, SQLite, PostgreSQL · EXPLAIN·슬로우 쿼리 분석·인덱스 튜닝</dd>
+      <dt>인프라·배포</dt><dd>AWS, NCloud, Ubuntu·Linux, Nginx·Apache, Docker, Windows 배포 환경, Rez</dd>
+      <dt>외부 연동</dt><dd>아임포트, 한진 원클릭 API, 카카오 알림톡, KCB 본인인증, 다우오피스 전자결재, 세콤 출입 데이터, 기상·조석 API</dd>
+      <dt>VFX·제작 도구</dt><dd>Autodesk ShotGrid API·Toolkit·Event Daemon, Maya·Nuke Python API, Deadline, OCIO, FFmpeg, PySide</dd>
+      <dt>AI·자동화</dt><dd>Claude Code(2025~), Ollama 로컬 LLM API 연동, 프롬프트·출력 형식 설계</dd>
+    </dl>
+  </div>
+</section>
+
+<section id="career">
+  <div class="wrap">
+    <h2>경력</h2>
+    <ul class="timeline">
+      <li><div class="when">2023.02 – 2026.08</div><div class="what"><b>스톤브이스튜디오 · 기업부설연구소 연구소장</b><span>VFX 제작사. 전 부서 인터뷰로 제작 파이프라인 환경 구축, 타임로그·인사평가·휴가 관리 등 사내 시스템 개발·운영. 한국 본사·베트남 지사</span></div></li>
+      <li><div class="when">2020.05 – 2023.01</div><div class="what"><b>디몬스터 · 개발3팀 팀장</b><span>웹·앱 개발 에이전시. 약 10명 팀 리딩, 19개 고객사 프로젝트 개발·관리·인계. 기획 검토·고객 협의부터 배포·인계까지</span></div></li>
+      <li><div class="when">2014.02 – 2019.03</div><div class="what"><b>포스크리에이티브파티 · TD팀 개발자</b><span>VFX 제작사. 약 200명 규모 그룹웨어 기획·전체 개발·운영, ShotGrid 도입, 제작 작업·인력 일정 관리 시스템</span></div></li>
+      <li><div class="when">2012.05 – 2014.02</div><div class="what"><b>에이지웍스 · TD 개발자</b><span>약 100명 규모 그룹웨어, 프로젝트·공정 관리·전자결재, jQuery Mobile 업무 화면</span></div></li>
+    </ul>
+  </div>
+</section>
+
+<section id="edu">
+  <div class="wrap">
+    <h2>학력·수상</h2>
+    <ul class="timeline">
+      <li><div class="when">2017.05</div><div class="what"><b>한국콘텐츠진흥원(KOCCA) 우수논문상</b><span>「콘텐츠제작의 공정관리를 위한 통합 관리시스템 개발 연구」 공저</span></div></li>
+      <li><div class="when">2016.05 – 2017.04</div><div class="what"><b>중소기업청 기업부설연구소 신규설치사업 참여연구원</b><span>「콘텐츠제작을 위한 공정관리 통합 시스템 개발」 (주관: 동의대학교산학협력단)</span></div></li>
+      <li><div class="when">2010.03 – 2012.08</div><div class="what"><b>경성대학교 교육대학원 컴퓨터교육전공 석사</b><span>석사논문 「대학입학사정관제의 일반화 및 보편화를 위한 지능형 학생 평가 시스템」</span></div></li>
+      <li><div class="when">2005.03 – 2009.02</div><div class="what"><b>동의대학교 컴퓨터공학과 학사</b></div></li>
+    </ul>
+  </div>
+</section>
+
+<footer><div class="wrap">
+  © 박이정 · <a href="mailto:ppp.ejung@gmail.com">ppp.ejung@gmail.com</a> · <a href="https://github.com/ejung-park" target="_blank" rel="noopener">GitHub</a>
+</div></footer>
+
+</body>
+</html>
